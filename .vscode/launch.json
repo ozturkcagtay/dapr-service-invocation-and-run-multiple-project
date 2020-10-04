@@ -1,0 +1,53 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "client",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "daprd-debug-client",
+            "program": "${workspaceFolder}/client/bin/Debug/netcoreapp3.1/client.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/client",
+            "stopAtEntry": false,
+            "serverReadyAction": {
+                "action": "openExternally",
+                "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
+            },
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            },
+            "sourceFileMap": {
+                "/Views": "${workspaceFolder}/client/Views"
+            },
+            "postDebugTask": "daprd-down-client"
+        },
+		{
+            "name": "server",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "daprd-debug-server",
+            "program": "${workspaceFolder}/server/bin/Debug/netcoreapp3.1/server.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/server",
+            "stopAtEntry": false,
+            "serverReadyAction": {
+                "action": "openExternally",
+                "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
+            },
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            },
+            "sourceFileMap": {
+                "/Views": "${workspaceFolder}/server/Views"
+            },
+            "postDebugTask": "daprd-down-server"
+        }
+    ],
+	"compounds": [
+    {
+      "name": "Server/Client",
+      "configurations": ["server","client"]
+    }
+  ]
+}
