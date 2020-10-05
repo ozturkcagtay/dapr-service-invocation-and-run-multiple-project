@@ -32,8 +32,15 @@
             "type": "daprd",
             "dependsOn": "build-client",
             "metricsPort": 9092,
+            "componentsPath": "./client/components",
             "grpcPort": 50001,
-            "httpPort": 3601
+            "httpPort": 3601,
+            "logLevel": "info",
+            "allowedOrigins": "*",
+            "enableMetrics": true,
+            "profilePort": 7777,
+            "protocol": "http",
+     
         },
         {
             "appId": "client-app",
@@ -47,8 +54,15 @@
             "type": "daprd",
             "dependsOn": "build-server",
             "metricsPort": 9091,
+            "componentsPath": "./server/components",
             "grpcPort": 50002,
-            "httpPort": 3600
+            "httpPort": 3600,
+            "logLevel": "info",
+            "allowedOrigins": "*",
+            "enableMetrics": true,
+            "profilePort": 7778,
+            "protocol": "http",
+       
         },
         {
             "appId": "server-app",
