@@ -35,12 +35,7 @@
             "componentsPath": "./client/components",
             "grpcPort": 50001,
             "httpPort": 3601,
-            "logLevel": "info",
-            "allowedOrigins": "*",
-            "enableMetrics": true,
-            "profilePort": 7777,
-            "protocol": "http",
-     
+            "logLevel": "info",     
         },
         {
             "appId": "client-app",
@@ -58,10 +53,7 @@
             "grpcPort": 50002,
             "httpPort": 3600,
             "logLevel": "info",
-            "allowedOrigins": "*",
-            "enableMetrics": true,
-            "profilePort": 7778,
-            "protocol": "http",
+ 
        
         },
         {
