@@ -39,7 +39,7 @@
             "allowedOrigins": "*",
             "enableMetrics": true,
             "profilePort": 7777,
-            "protocol": "http"
+            "protocol": "http"     
         },
         {
             "appId": "client-app",
@@ -60,7 +60,7 @@
             "allowedOrigins": "*",
             "enableMetrics": true,
             "profilePort": 7778,
-            "protocol": "http"
+            "protocol": "http"      
         },
         {
             "appId": "server-app",
