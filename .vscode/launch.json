@@ -15,7 +15,8 @@
                 "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
             },
             "env": {
-                "ASPNETCORE_ENVIRONMENT": "Development"
+                "ASPNETCORE_ENVIRONMENT": "Development",
+                "DAPR_GRPC_PORT" : "50002"
             },
             "sourceFileMap": {
                 "/Views": "${workspaceFolder}/client/Views"
@@ -36,7 +37,8 @@
                 "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
             },
             "env": {
-                "ASPNETCORE_ENVIRONMENT": "Development"
+                "ASPNETCORE_ENVIRONMENT": "Development",
+                "DAPR_GRPC_PORT": "50001"
             },
             "sourceFileMap": {
                 "/Views": "${workspaceFolder}/server/Views"
